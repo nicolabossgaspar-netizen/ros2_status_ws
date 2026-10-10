@@ -55,8 +55,19 @@ ros2 topic echo /system_status --once
 只上传 src、README.md、.gitignore 等项目源文件；不要上传 build、install、log。
 仓库按题目要求设为 Public，建议补充真实运行截图。
 package.xml 和 setup.py 中 student / student@example.com 是占位维护者信息，提交前替换为你愿意公开的姓名和邮箱。
-包元数据声明 Apache-2.0；如保持该许可，发布前补充对应 LICENSE 正文。
+包元数据声明 Apache-2.0。
 
 ## 验证范围
-整理时已检查 Python 语法、XML、消息结构、显示单位换算和连接超时逻辑。
-尚未在你的 Ubuntu 虚拟机中进行 colcon 构建或 ROS/Qt 联调；须按以上步骤实际运行后再说明测试通过。
+## 运行验证
+
+已在 VirtualBox 中的 Ubuntu 22.04 + ROS 2 Humble 环境完成以下验证：
+
+- 官方 talker/listener 示例通信正常。
+- 两个 ROS 2 包编译成功，构建结果为 `2 packages finished`。
+- 系统状态采集节点与 Qt 显示节点成功运行。
+- 界面能够接收并显示采样时间、主机名、CPU 使用率、内存信息和网络累计收发量。
+
+## 运行截图
+
+![系统监控运行截图](running.png)
+
